@@ -1,0 +1,4 @@
+halyard:
+  spinnakerVersion: 1.33.0
+  image:
+    tag: 1.51.0
