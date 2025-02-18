@@ -1,23 +1,12 @@
 pipeline {
     agent any
-    
     stages {
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-        
         stage('Run Script') {
             steps {
-                sh './app-script.sh'
+                script {
+                    sh 'echo "Webhook triggered successfully!"'
+                }
             }
-        }
-    }
-    
-    post {
-        success {
-            echo 'Pipeline executed successfully!'
         }
     }
 }
